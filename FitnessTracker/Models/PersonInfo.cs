@@ -7,19 +7,22 @@ namespace FitnessTracker.Models
 {
     public class PersonInfo
     {
-    private   string   _firstName { get; set; };
-    private   string   _lastName { get; set; };
-    private   int     _personId  { get; set; };
-    private  string   _phoneNumber { get; set; };
-    private  string  _email { get; set; };
-    private  double   _personHeight { get; set; };
-    private  double   _registerWeight { get; set; };
-    private  datetime  _birthday { get; set; };
-    private  string  _gender { get; set; };
+    public    string   _firstName { get; set; }
+    public    string   _lastName { get; set; }
+    public    int     _personId  { get; set; }
+    public   string   _phoneNumber { get; set; }
+    public   string  _email { get; set; }
+    public   double   _personHeight { get; set; }
+    public   double   _registerWeight { get; set; }
+    public   DateTime  _birthday { get; set; }
+    public   string  _gender { get; set; }
 
 
-    public  PersonInfo ()
+    public  PersonInfo(string firstName, string lastName)
     {
+      _firstName=firstName;
+      _lastName=lastName;
+
 
     }
 
@@ -36,13 +39,14 @@ namespace FitnessTracker.Models
            bool areSecondNamesEqual = this._lastName.Equals(newPersonInfo._lastName);
            bool arePhonesEqual = this._phoneNumber.Equals(newPersonInfo._phoneNumber);
            bool areEmailsEqual = this._email.Equals(newPersonInfo._email);
-           bool areHeightsEqual = this._height.Equals(newPersonInfo._personHeight);
+           bool areHeightsEqual = this._personHeight.Equals(newPersonInfo._personHeight);
            bool areWeightsEqual = this._registerWeight.Equals(newPersonInfo._registerWeight);
            bool areDateEqual = this._birthday.Equals(newPersonInfo._birthday);
            bool areGenderEqual = this._gender.Equals(newPersonInfo._gender);
            bool areIdsEqual = this._personId.Equals(newPersonInfo._personId);
 
-           return (areNamesEqual && areIdsEqual);
+           return (areFirstNamesEqual && areSecondNamesEqual && arePhonesEqual && areEmailsEqual
+              && areHeightsEqual && areWeightsEqual &&  areDateEqual &&  areGenderEqual &&  areIdsEqual);
        }
    }
 
@@ -72,15 +76,15 @@ namespace FitnessTracker.Models
                    double personHeigt = rdr.GetDouble(7);
                     double personWeight = rdr.GetDouble(8);
 
-               PersonInfo newPersonInfo = new PersonInfo(patronName, patronId);
-               allPersonInfos.Add(newPatron);
+               PersonInfo newPersonInfo = new PersonInfo(personFirstName, personSecondName);
+               allPersonInfos.Add(newPersonInfo);
            }
            conn.Close();
            if (conn != null)
            {
                conn.Dispose();
            }
-           return PersonInfo;
+           return allPersonInfos;
     }
 
 
@@ -115,6 +119,50 @@ namespace FitnessTracker.Models
             conn.Dispose();
         }
         }
+
+        public static PersonInfo Find(int id)
+      {
+          MySqlConnection conn = DB.Connection();
+          conn.Open();
+          var cmd = conn.CreateCommand() as MySqlCommand;
+          cmd.CommandText = @"SELECT * FROM persons WHERE person_id = @stylistId;";
+
+          cmd.Parameters.Add(new MySqlParameter("@stylistId", id));
+
+          var rdr = cmd.ExecuteReader() as MySqlDataReader;
+
+              int personId = 0;
+               string personFirstName = "";
+                string personSecondName = "";
+                string personGender = "" ;
+                 string personPhone = "";
+                  string personEmail = "";
+                   DateTime personBirthday = new DateTime(1000,11,11);
+                   double personHeigt = 0;
+                    double personWeight = 0;
+
+              while (rdr.Read())
+          {
+             personId = rdr.GetInt32(0);
+              personFirstName = rdr.GetString(1);
+               personSecondName = rdr.GetString(2);
+               personGender = rdr.GetString(3);
+                personPhone = rdr.GetString(4);
+                 personEmail = rdr.GetString(5);
+                  personBirthday = rdr.GetDateTime(6);
+                  personHeigt = rdr.GetDouble(7);
+                   personWeight = rdr.GetDouble(8);
+          }
+           PersonInfo foundPersonInfo = new PersonInfo(personFirstName,personSecondName);
+
+          conn.Close();
+          if (conn != null)
+          {
+              conn.Dispose();
+          }
+
+          return foundPersonInfo;
+      }
 
 
 
