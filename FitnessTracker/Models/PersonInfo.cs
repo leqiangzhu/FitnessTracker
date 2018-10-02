@@ -11,7 +11,7 @@ namespace FitnessTracker.Models
     private   string   _lastName { get; set; };
     private   int     _personId  { get; set; };
     private  string   _phoneNumber { get; set; };
-    private  string  _eamil { get; set; };
+    private  string  _email { get; set; };
     private  double   _personHeight { get; set; };
     private  double   _registerWeight { get; set; };
     private  datetime  _birthday { get; set; };
@@ -35,7 +35,7 @@ namespace FitnessTracker.Models
            bool areFirstNamesEqual = this._firstName.Equals(newPersonInfo._firstName);
            bool areSecondNamesEqual = this._lastName.Equals(newPersonInfo._lastName);
            bool arePhonesEqual = this._phoneNumber.Equals(newPersonInfo._phoneNumber);
-           bool areEmailsEqual = this._eamil.Equals(newPersonInfo._eamil);
+           bool areEmailsEqual = this._email.Equals(newPersonInfo._email);
            bool areHeightsEqual = this._height.Equals(newPersonInfo._personHeight);
            bool areWeightsEqual = this._registerWeight.Equals(newPersonInfo._registerWeight);
            bool areDateEqual = this._birthday.Equals(newPersonInfo._birthday);
@@ -102,7 +102,7 @@ namespace FitnessTracker.Models
                 cmd.Parameters.Add(new MySqlParameter("@personSecond", this._lastName));
                 cmd.Parameters.Add(new MySqlParameter("@personGender", this._gender));
                 cmd.Parameters.Add(new MySqlParameter("@personPhone", this._phoneNumber));
-                cmd.Parameters.Add(new MySqlParameter("@personEmail", this._eamil));
+                cmd.Parameters.Add(new MySqlParameter("@personEmail", this._email));
                 cmd.Parameters.Add(new MySqlParameter("@personBirthday", this._birthday));
                 cmd.Parameters.Add(new MySqlParameter("@personHeigt", this._personHeight));
                 cmd.Parameters.Add(new MySqlParameter("@personWeight", this._registerWeight));
@@ -115,6 +115,10 @@ namespace FitnessTracker.Models
             conn.Dispose();
         }
         }
+
+
+
+
 
 
 
