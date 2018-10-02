@@ -11,7 +11,7 @@ namespace FitnessTracker.Models
     private   string   _lastName { get; set; };
     private   int     _personId  { get; set; };
     private  string   _phoneNumber { get; set; };
-    private  string  _eamil { get; set; };
+    private  string  _email { get; set; };
     private  double   _personHeight { get; set; };
     private  double   _registerWeight { get; set; };
     private  datetime  _birthday { get; set; };
