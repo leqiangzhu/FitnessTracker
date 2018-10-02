@@ -79,5 +79,40 @@ namespace FitnessTracker.Models
         conn.Dispose();
       }
     }
+
+    public static Register Find(int id)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM `register` WHERE id = @searchId;";
+
+      MySqlParameter searchId = new MySqlParameter();
+      searchId.ParameterName = "@searchId";
+      searchId.Value = id;
+      cmd.Parameters.Add(searchId);
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      int userId = 0;
+      string userName = "";
+      string password = "";
+      while (rdr.Read())
+      {
+        userId = rdr.GetInt32(0);
+        userName = rdr.GetString(1);
+        password = rdr.GetString(2);
+      }
+      Register foundRegister = new Register(userName, password, userId);
+
+
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+      return foundRegister;
+    }
+
+    
   }
 }
