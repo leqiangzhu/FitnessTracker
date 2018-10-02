@@ -7,6 +7,7 @@ namespace FitnessTracker.Models
 {
     public class PersonInfo
     {
+<<<<<<< HEAD
     public    string   _firstName { get; set; }
     public    string   _lastName { get; set; }
     public    int     _personId  { get; set; }
@@ -19,6 +20,20 @@ namespace FitnessTracker.Models
 
 
     public  PersonInfo(string firstName, string lastName)
+=======
+    private   string   _firstName { get; set; };
+    private   string   _lastName { get; set; };
+    private   int     _personId  { get; set; };
+    private  string   _phoneNumber { get; set; };
+    private  string  _email { get; set; };
+    private  double   _personHeight { get; set; };
+    private  double   _registerWeight { get; set; };
+    private  datetime  _birthday { get; set; };
+    private  string  _gender { get; set; };
+
+
+    public  PersonInfo ()
+>>>>>>> 1b5156d0a8b3e29d9590c62b60b0ac241694c80b
     {
       _firstName=firstName;
       _lastName=lastName;
