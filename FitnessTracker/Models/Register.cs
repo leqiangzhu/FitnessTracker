@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using MySql.Data.MySqlClient;
+using FitnessTracker;
+
+namespace FitnessTracker.Models
+{
+  public class Register
+  {
+    private int _userId;
+    private string _userName;
+    private string _password;
+
+
+    public Register(string userName, string password, int Id = 0)
+    {
+      _userId = Id;
+      _userName = userName;
+      _password = password;
+    }
+    public string GetUserName()
+    {
+      return _userName;
+    }
+    public string GetPassword()
+    {
+      return _password;
+    }
+    public int GetId()
+    {
+      return _userId;
+    }
+
+    public override bool Equals(System.Object otherRegister)
+    {
+      if (!(otherRegister is Register))
+      {
+        return false;
+      }
+      else
+      {
+        Register newRegister = (Register) otherRegister;
+        bool idEquality = (this.GetId() == newRegister.GetId());
+        bool nameEquality = (this.GetUserName() == newRegister.GetUserName());
+        bool passwordEquality = this.GetPassword() == newRegister.GetPassword();
+        return (idEquality && nameEquality && passwordEquality);
+      }
+    }
+    public override int GetHashCode()
+    {
+      return this.GetUserName().GetHashCode();
+    }
+
+    public void Save()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"INSERT INTO register (username, password) VALUES (@UserName, @Password);";
+
+      MySqlParameter userName = new MySqlParameter();
+      userName.ParameterName = "@UserName";
+      userName.Value = this._userNamename;
+      cmd.Parameters.Add(userName);
+
+      MySqlParameter password = new MySqlParameter();
+      password.ParameterName = "@Password";
+      password.Value = this._password;
+      cmd.Parameters.Add(password);
+
+
+
+      cmd.ExecuteNonQuery();
+      _id = (int) cmd.LastInsertedId;
+
+      conn.Close();
+      if(conn != null)
+      {
+        conn.Dispose();
+      }
+    }
+  }
+}
