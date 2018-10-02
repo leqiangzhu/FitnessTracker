@@ -164,7 +164,7 @@ namespace FitnessTracker.Models
           return foundPersonInfo;
       }
 
-      public   double bmi;
+    //  public   double bmi;
 
       public  void  CalculatorBMI(double Weight,double Height){
               bmi=Weight/Height*Height*703;

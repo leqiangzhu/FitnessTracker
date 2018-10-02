@@ -8,7 +8,7 @@ namespace FitnessTracker.Models
   public class Exercise
   {
       public  string _exerciseName { get; set; }
-      public  string _exerciseId { get; set; }
+      public  int _exerciseId { get; set; }
 
 
   public Exercise(string exerciseName,int exerciseId=0){

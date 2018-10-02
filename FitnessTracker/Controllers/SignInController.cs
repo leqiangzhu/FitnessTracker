@@ -4,8 +4,8 @@ using FitnessTracker.Models;
 
 namespace FitnessTracker.Controllers
 {
-    public class SignInController : Controller
-    {
-      [HttpGet("/")]
-    }
+    // public class SignInController : Controller
+    // {
+    //   [HttpGet("/")]
+    // }
 }
