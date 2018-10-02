@@ -1,0 +1,30 @@
+@{
+
+Layout = "_Layout";
+
+}
+
+<div class="container">
+<h1>Add your Information</h1>
+<form action="/infos" method="post">
+  <label for="firstname">First Name:</label>
+  <input id="firstname" name="new-firstname" type="text">
+  <label for="lastname">Last Name:</label>
+  <input id="lastname" name="new-lastname" type="text">
+  <label for="phone-number">Phone Number:</label>
+  <input id="phone-number" name="new-phone-number" type="text">
+  <label for="email">Email Address:</label>
+  <input id="email" name="new-email" type="text">
+  <label for="height">Height in inches:</label>
+  <input id="height" name="new-height" type="text">
+  <label for="weight">Weight in pounds:</label>
+  <input id="weight" name="new-weight" type="text">
+  <label for="birhtday">Birthday:</label>
+  <input id="birhtday" name="new-birhtday" type="date">
+  <label for="gender">Gender:</label>
+  <input id="gender" name="new-gender" type="text">
+  <button type="submit">Add Info</button>
+</form>
+
+<p><a href="/infos">View all students</a></p>
+</div>
