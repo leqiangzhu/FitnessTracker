@@ -39,8 +39,9 @@ namespace FitnessTracker.Controllers
         [HttpPost("/infos/{id}")]
         public ActionResult AddExerciseToUser()
         {
-          PersonInfo foundPerson = PersonInfo.Find(id);
           
         }
+
+        [HttpGet("/infos/{id}/")]
     }
 }

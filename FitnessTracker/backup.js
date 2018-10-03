@@ -1,18 +1,27 @@
-var userInput = [""];
+var userInput = {
+};
 var userList = [];
 var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]; 
+var currentDay = daysOfTheWeek[0];
 
 var views = {
-    Use user input to graph results and have dummy information so that people can see different types of graphs
-
+    displayExercises: () => {document.className = "";document.classList.Add("exercises");},
+    displayDay: () => currentDay,
+    displayGraph: () => userInput[0],
+    displayExercises: () => userInput[0],
+    displayExercises: () => userInput[0],
 };
 
 var controllers = {
+    addExercise: () => bongo,
+    addUser: () => bongo,
+    addWorkout: () => bongo,
+    
 
 };
 var models = {
     user = {
-        id: this.length - 1,
+        id: userList.length - 1,
         firstName: userInput,
         lastName: userInput,
         weight: userInput,
