@@ -113,6 +113,20 @@ namespace FitnessTracker.Models
       return foundRegister;
     }
 
+    public void ClearAll()
+    {
+        MySqlConnection conn = DB.Connection();
+        conn.Open();
+        var cmd = conn.CreateCommand() as MySqlCommand;
+        cmd.CommandText = @"DELETE FROM exercises;";
+        cmd.ExecuteNonQuery();
+        conn.Close();
+        if (conn != null)
+        {
+            conn.Dispose();
+        }
+    }
+
     
   }
 }
