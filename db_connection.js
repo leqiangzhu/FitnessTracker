@@ -88,20 +88,17 @@ let update = function(column, id, propertyName, newValue)
     con.query(sqlCommand, function (err, result) {
         if (err) throw err;
         console.log(`updated ${propertyName} in ${column}!`);
-        for (var prop in result)
-        {
-        }
     }); 
 }
-let save = function()
+let personSave = function(id, first, second, gender, phone, email, birthday, height, weight)
 {
-    let sqlCommand = `INSERT INTO persons ${propertyName} = '${newValue}' WHERE person_id = ${id};`;
+
+    let sqlCommand = `INSERT INTO persons (person_id, person_first, person_second, person_gender, person_phone, person_email, person_birthday, person_height, person_weight) VALUES ('${id}', '${first}', '${second}', '${gender}', '${phone}', '${email}','${birthday}',' ${height}', '${weight}');`;
     con.query(sqlCommand, function (err, result) {
         if (err) throw err;
-        console.log(`updated ${propertyName}!`);
+        console.log(`added new person!`);
     }); 
 }
 
-update("person", 2, "person_gender", "Male"); 
-
+    personSave(10, "John", "Johnson", "None", "304-888-1800", "amkhokargmail.com", new Date('December 17, 1995 03: 24: 00').toMysqlFormat(), 120, 180);
 });
