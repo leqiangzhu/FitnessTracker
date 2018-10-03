@@ -7,7 +7,7 @@ using FitnessTracker.Models;
 namespace FitnessTracker.Tests
 {
     [TestClass]
-    public class HomeControllerTest
+    public class HomeControllerTests
     {
     }
 }
