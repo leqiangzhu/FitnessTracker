@@ -677,5 +677,10 @@ padding: 18px 0px;
 h1.header-w3ls {
 font-size: 25px;
 }
+
 }
+    canvas {
+        height: 100%;
+        width: 100%;
+    }
 /*--//responsive--*/

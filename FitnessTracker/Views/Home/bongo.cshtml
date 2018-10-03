@@ -1,7 +1,75 @@
 @{
     Layout = "_Layout";
 }
-<div class="container">
+<h1 class="header-w3ls">
+  Set Your Account
+</h1>
+<div class="art-bothside" style="position: absolute;text-align:center;margin-left: 400px;pointer-events:none;">
+  <div class="sap_tabs">
+    <div id="horizontalTab">
+      <ul class="resp-tabs-list">
+        <li class="resp-tab-item"><span>Login</span></li>
+        <li class="resp-tab-item"><span>Sign Up</span></li>
+      </ul>
+      <div class="clearfix" />
+      <div class="resp-tabs-container">
+        <div class="tab-1 resp-tab-content">
+          <div class="swm-right-w3ls">
+            <form action="#" method="post">
+              <div class="main">
+                <div class="icon-head-wthree">
+                  <h2>Log-in Here</h2>
+                </div>
+                <div class="form-left-w3l">
+                  <input type="email" name="email" placeholder="Email" required="">
+                </div>
+                <div class="form-right-w3ls">
+                  <input type="password" name="password" placeholder="Password" required="">
+                </div>
+                <div class="btnn">
+                  <button type="submit">Log-In</button><br>
+                  <a href="#" class="for">Forgot password...?</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="tab-1 resp-tab-content">
+          <div class="swm-left-w3ls">
+            <form action="#" method="post">
+              <div class="main">
+                <div class="icon-head-wthree">
+
+                  <!-- Sign up -->
+                  <h2>Sign Up Here</h2>
+                </div>
+                <div class="form-left-to-w3l">
+                  <input type="text" name="name" placeholder="Name" required="">
+                </div>
+                <div class="form-left-w3l">
+                  <input type="email" name="email" placeholder="Email" required="">
+                </div>
+                <div class="form-right-w3ls ">
+                  <input type="password" name="password" placeholder="Password" required="">
+                </div>
+                <div class="btn">
+                  <button type="submit">Sign Up</button><br>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="copy">
+  <p>&copy;2018 {Bongolia Team} All Rights Reserved | Thanks To <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
+</div>
 <script>
 window.demoDescription = "Create a subdivided grid colored with HSL color space. The pointer position updates the hue.";
 
@@ -44,7 +112,7 @@ Pts.quickStart( "#pt", "#fe3" );
     let color = (p) => {
       let p1 = p.$divide(space.size);
       let p2 = space.pointer.$divide(space.size);
-      let c = cu.$multiply( Pt.make( 4, 1 ).to( p2.x, p2.y/2 + p1.x/2, p1.y ) );
+      let c = cu.$multiply( Pt.make( 4, 1 ).to( p2.x, p2.y/3 + p1.x/3, p1.y ) );
       return Color.HSLtoRGB( c ).toString("rgb");
     }
     
@@ -60,4 +128,4 @@ Pts.quickStart( "#pt", "#fe3" );
   
 })();
 </script>
-</div>
+
