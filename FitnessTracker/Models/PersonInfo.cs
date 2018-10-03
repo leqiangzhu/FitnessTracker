@@ -25,6 +25,17 @@ namespace FitnessTracker.Models
       _firstName=firstName;
       _lastName=lastName;
     }
+    public PersonInfo(string firstName, string lastName, string phoneNumber, string email, double height, double weight, DateTime birthday, string gender)
+    {
+      _firstName = firstName;
+      _lastName = lastName;
+      _phoneNumber = phoneNumber;
+      _email = email;
+      _personHeight = height;
+      _registerWeight = weight;
+      _birthday = birthday;
+      _gender = gender;
+    }
 
     public override bool Equals(System.Object otherPersonInfo)
    {

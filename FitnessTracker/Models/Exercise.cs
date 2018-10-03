@@ -12,7 +12,7 @@ namespace FitnessTracker.Models
 
 
   public Exercise(string exerciseName,int exerciseId=0){
-        _exerciseName=exerciseName;
+        _exerciseName = exerciseName;
         _exerciseId=exerciseId;
   }
 
@@ -26,14 +26,14 @@ namespace FitnessTracker.Models
      else
      {
          Exercise newExercise = (Exercise) otherExercise;
-         bool areexerciseNameEqual = this._exerciseName.Equals(newExercise._exerciseName);
-         return (areexerciseNameEqual);
+         bool areExerciseNamesEqual = this._exerciseName.Equals(newExercise._exerciseName);
+         return (areExerciseNamesEqual);
      }
  }
 
  public override int GetHashCode()
  {
-     return this.exerciseName.GetHashCode();
+     return this._exerciseName.GetHashCode();
  }
 
 

@@ -60,18 +60,15 @@ namespace FitnessTracker.Models
 
       MySqlParameter userName = new MySqlParameter();
       userName.ParameterName = "@UserName";
-      userName.Value = this._userNamename;
+      userName.Value = this._userName;
       cmd.Parameters.Add(userName);
 
       MySqlParameter password = new MySqlParameter();
       password.ParameterName = "@Password";
       password.Value = this._password;
       cmd.Parameters.Add(password);
-
-
-
       cmd.ExecuteNonQuery();
-      _id = (int) cmd.LastInsertedId;
+      _userId = (int) cmd.LastInsertedId;
 
       conn.Close();
       if(conn != null)
