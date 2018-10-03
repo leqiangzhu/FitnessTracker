@@ -4,68 +4,6 @@
 <h1 class="header-w3ls">
   Set Your Account
 </h1>
-<div class="art-bothside" style="position: absolute;text-align:center;margin-left: 400px;pointer-events:none;">
-  <div class="sap_tabs">
-    <div id="horizontalTab">
-      <ul class="resp-tabs-list">
-        <li class="resp-tab-item"><span>Login</span></li>
-        <li class="resp-tab-item"><span>Sign Up</span></li>
-      </ul>
-      <div class="clearfix" />
-      <div class="resp-tabs-container">
-        <div class="tab-1 resp-tab-content">
-          <div class="swm-right-w3ls">
-            <form action="#" method="post">
-              <div class="main">
-                <div class="icon-head-wthree">
-                  <h2>Log-in Here</h2>
-                </div>
-                <div class="form-left-w3l">
-                  <input type="email" name="email" placeholder="Email" required="">
-                </div>
-                <div class="form-right-w3ls">
-                  <input type="password" name="password" placeholder="Password" required="">
-                </div>
-                <div class="btnn">
-                  <button type="submit">Log-In</button><br>
-                  <a href="#" class="for">Forgot password...?</a>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <!--  -->
-        <div class="tab-1 resp-tab-content">
-          <div class="swm-left-w3ls">
-            <form action="#" method="post">
-              <div class="main">
-                <div class="icon-head-wthree">
-
-                  <!-- Sign up -->
-                  <h2>Sign Up Here</h2>
-                </div>
-                <div class="form-left-to-w3l">
-                  <input type="text" name="name" placeholder="Name" required="">
-                </div>
-                <div class="form-left-w3l">
-                  <input type="email" name="email" placeholder="Email" required="">
-                </div>
-                <div class="form-right-w3ls ">
-                  <input type="password" name="password" placeholder="Password" required="">
-                </div>
-                <div class="btn">
-                  <button type="submit">Sign Up</button><br>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!--  -->
-      </div>
-    </div>
-  </div>
-</div>
 <!--  -->
 <div class="copy">
   <p>&copy;2018 {Bongolia Team} All Rights Reserved | Thanks To <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
@@ -124,8 +62,38 @@ Pts.quickStart( "#pt", "#fe3" );
   //// ----
   
   
-  space.bindMouse().bindTouch().play();
+  space.bindMouse().play();
   
 })();
 </script>
+<div class="form-container" style="display:inline-block">
+<form action="/" method="post">
+    <label for="new-firstname">First Name:</label><br>
+    <input id="new-firstname" name="new-firstname">
+    
+    <label for="new-lastname">Last Name:</label><br>
+    <input id="new-lastname" name="new-lastname" type="text">
 
+    <label for="new-phone-number">Phone Number:</label><br>
+    <input id="new-phone-number" name="new-phone-number" type="text">
+
+    <label for="new-email">Email:</label><br>
+    <input id="new-email" name="new-email" type="text">
+
+    <label for="new-height">Height:</label><br>
+    <input id="new-height" name="new-height" type="text">
+
+    <label for="new-weight">Weight:</label><br>
+    <input id="new-weight" name="new-weight" type="text">
+
+    <label for="new-birthday">Birthday:</label><br>
+    <input id="new-birthday" name="new-birthday" type="date">
+
+    <label for="new-gender">Gender:</label><br>
+    <select>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+</form>
+</div>
