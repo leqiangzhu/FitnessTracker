@@ -8,7 +8,7 @@ namespace FitnessTracker.Controllers
     {
       [HttpGet("/")]
 
-        public ActionResult SignUp()
+        public ActionResult SignIn()
 
         {
             return View();
