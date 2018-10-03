@@ -7,7 +7,9 @@ namespace FitnessTracker.Controllers
     public class HomeController : Controller
     {
       [HttpGet("/")]
+
         public ActionResult SignUp()
+
         {
             return View();
         }

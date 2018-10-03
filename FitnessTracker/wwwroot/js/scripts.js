@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("Mark, where did you get this template? Hit me up at amkhokar@gmail.com");
   $('.menu-link').bigSlide();
   $('#horizontalTab').easyResponsiveTabs({
    type: 'default', //Types: default, vertical, accordion
