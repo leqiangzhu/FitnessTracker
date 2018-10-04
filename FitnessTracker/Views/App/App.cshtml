@@ -4,7 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-</head>
 <body>
 	<div class="body-back">
 		<div class="masthead pdng-stn1">
@@ -17,7 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</form>
 					</div>
 					<div class="profile-menu text-center">
-						<img class="img-circle border-effect" src="images/.png">
+						<img src="images/user.png">
 						<h3>Model.@GetName()</h3>
 						<h4>Performance Records</h4>
 						<div class="pro-menu">
@@ -124,10 +123,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="clearfix"></div>
 				</div>
-				<div class="details-grid">
+				<div class="bg image"><div>
 					<div class="details-shade">
 						<div class="col-md-6 details-left">
-							<img class="img-circle border-effect" src="~/img/user.png">
+							<img class="img-circle border-effect" src="images/user.png">
 						</div>
 						<div class="col-md-6 details-right">
 							<h3>@Model.GetName()</h3>
@@ -151,20 +150,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="follow">
 						<div class="col-sm-4 follow-left text-center">
 							<h3>Foot Steps</h3>
-							<img id="steps" src="~/img/steps.png">
+							<img id="steps" src="images/runner.png">
 							<p>19,950</p>
 						</div>
 						<!--  -->
 						<div class="col-sm-4 follow-left text-center">
 							<h3>Distance Traveled</h3>
 							<p>1,005 miles</p>
-							<img src="~/img/travel.png">
+							<img src="images/map.png">
 						</div>
 						<!--  -->
 						<div class="col-sm-4 follow-left text-center">
 							<h3>BMI</h3>
 							<p>10.1%</p>
-							<img src="~/img/body.png">
+							<img src="images/weight-lifting.png">
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -184,16 +183,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</select>
 				</div>
 
+<!--  -->
 
 				<div class="fit-goals">
+<!--  -->
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<div class="hi-icon"></a>
-								</div>
+							<img src="images/workout.png">
 							</div>
 						</div>
-
 						<div class="goal-info">
 							<h4>Weight Lifting</h4>
 							<select>
@@ -208,7 +207,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<div class="hi-icon"></div>
+							<img src="images/workout.png"><
 							</div>
 						</div>
 						<div class="goal-info">
@@ -226,9 +225,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<a href="#" class="hi-icon goal-icon3"></a>
-							</div>
+						<img src="images/exercise.png">
 						</div>
+					</div>
 						<div class="goal-info">
 							<h4>Exercise</h4>
 							<select>
@@ -239,23 +238,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</select>
 						</div>
 						<div class="clearfix"></div>
-					</div>
+				</div>
 					<!-- 3 -->
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<a href="#" class="hi-icon goal-icon3"></a>
+							<img src="images/met.png">
 							</div>
 						</div>
-						<div class="goal-info">
-							<h4>Goals</h4>
-							<div class="follow-right">
-								<ol>
-									<li>Complete 5 Sets</li>
-									<li>Complete 5 Exercises</li>
-									<li>Follow Diet Plan</li>
-									<li>Sleep 8 hours</li>
-								</ol>
+							<div class="goal-info">
+									<h4>Goals</h4>
+									<label class="container">Complete 3 Exercises
+										<input type="checkbox" checked="checked">
+										<span class="checkmark"></span>
+									</label>
+									<label class="container">Complete 5 sets
+										<input type="checkbox" checked="checked">
+										<span class="checkmark"></span>
+									</label>
+									<label class="container">Follow Diet Plan
+										<input type="checkbox" checked="checked">
+										<span class="checkmark"></span>
+									</label>
+									<label class="container">Sleep 8 Hrs
+										<input type="checkbox" checked="checked">
+										<span class="checkmark"></span>
+									</label>
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -263,33 +271,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<br>
 					<div class="clearfix"></div>
-
+<!--  -->
 					<div class="goals">
 						<div class="fit-goals">
 							<h3>Target Weight</h3>
 							<div class="col-sm-6 goal-left">
 								<div class="goal-img">
 									<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-										<a href="#" class="hi-icon "><i class="fa fa-cutlery"></i></a>
+									<img src="images/lessweight.png">
 									</div>
 								</div>
 								<div class="goal-info">
 									<h4>Current Weight</h4>
-									<p>@Mode.GetWeight()</p>
+									<p>@Model.GetWeight()</p>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="col-sm-6 goal-left">
 								<div class="goal-img">
 									<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-										<a href="#" class="hi-icon"><i class="fa fa-heartbeat"></i></a>
+									<img src="images/scale.png">
 									</div>
 								</div>
 								<div class="goal-info">
 									<h4>Target Weight</h4>
 									<form action="/" method="post">
-										<label for="weight"></label>
+										<label for="weight">
 										<input type="text">
+									</label>
 										<div class="btn btn-success">Submit</div>
 									</form>
 
@@ -305,7 +314,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h1>Guidelines and Features </h1>
 						<div class="col-md-6 program-left quality">
 							<figure>
-								<img class="img-responsive" src="images/p2.jpg" alt="lovely">
+								<img class="img-responsive" src="images/p2.jpg">
 								<figcaption>
 									<div class="fig-bor">
 										<h3>Be a better lifter!</h3>
@@ -368,9 +377,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									});
 									</script>
 								</div>
+
+								<!--  -->
 								<div class="col-md-6 program-left quality">
 									<figure>
-										<img class="img-responsive" src="images/p1.jpg" alt="lovely">
+										<img src="images/p1.jpg" class="img-responsive" />
 										<figcaption>
 											<div class="fig-bor">
 												<h3>Be Part of our Group!</h3>
@@ -420,6 +431,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</div>
 								<div class="clearfix"></div>
 							</div>
+
+							<!--  -->
 							<div class="statistics">
 								<div class="stat-shade">
 									<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
@@ -439,4 +452,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 					</div>
-				
