@@ -8,14 +8,10 @@ namespace FitnessTracker.Controllers
     {
       [HttpGet("/")]
 
-<<<<<<< HEAD
         public ActionResult bongo()
-=======
-        public ActionResult SignIn()
->>>>>>> 128b423c124062c82160122fd7d094caab617c0b
 
         {
-            return View();
+            return View("bongo");
         }
     }
 }

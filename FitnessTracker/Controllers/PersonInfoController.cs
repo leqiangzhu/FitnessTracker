@@ -36,12 +36,12 @@ namespace FitnessTracker.Controllers
           return RedirectToAction("Index");
         }
 
-        [HttpPost("/infos/{id}")]
-        public ActionResult AddExerciseToUser()
-        {
+        // [HttpPost("/infos/{id}")]
+        // public ActionResult AddExerciseToUser()
+        // {
           
-        }
+        // }
 
-        [HttpGet("/infos/{id}/")]
+        // [HttpGet("/infos/{id}/")]
     }
 }
