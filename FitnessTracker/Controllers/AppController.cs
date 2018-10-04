@@ -10,7 +10,9 @@ namespace FitnessTracker.Controllers
       [HttpGet("App")]
         public ActionResult Index()
         {
-            return View("App");
+       List<PersonInfo> allPersonInfos = PersonInfo.GetAllInfo();
+       PersonInfo newperson= PersonInfo.Find(1);
+            return View("App",newperson);
         }
 
      

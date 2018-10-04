@@ -4,17 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<<<<<<< HEAD
-</head>
-<body>
-=======
 @{
 
 Layout = "_Layout";
 
 }
 
->>>>>>> master
+@using FitnessTracker.Models;
+
+
 	<div class="body-back">
 		<div class="masthead pdng-stn1">
 			<div id="menu" class="panel" role="navigation">
@@ -27,7 +25,7 @@ Layout = "_Layout";
 					</div>
 					<div class="profile-menu text-center">
 						<img class="img-circle border-effect" src="images/.png">
-						<h3>Model.@GetName()</h3>
+							<h3>Model.__firstName</h3>
 						<h4>Performance Records</h4>
 						<div class="pro-menu">
 							<p>Strength</p>
@@ -139,7 +137,7 @@ Layout = "_Layout";
 							<img class="img-circle border-effect" src="~/img/user.png">
 						</div>
 						<div class="col-md-6 details-right">
-							<h3>@Model.GetName()</h3>
+							<h3>@Model._firstName</h3>
 							<h4>Daily Statistics</h4>
 							<div class="progress">
 								<div class="progress-bar" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%;">
@@ -284,7 +282,7 @@ Layout = "_Layout";
 								</div>
 								<div class="goal-info">
 									<h4>Current Weight</h4>
-									<p>@Mode.GetWeight()</p>
+									<p>@Model._registerWeight</p>
 								</div>
 								<div class="clearfix"></div>
 							</div>
