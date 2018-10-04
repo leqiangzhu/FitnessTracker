@@ -7,6 +7,8 @@ namespace FitnessTracker.Models
 {
     public class CustomClassHere
     {
+        
+        
 
     }
 }

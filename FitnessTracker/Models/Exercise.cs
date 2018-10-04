@@ -40,12 +40,12 @@ namespace FitnessTracker.Models
 
       public void Save()
      {
-     MySqlConnection conn = DB.Connection();
-     conn.Open();
+        MySqlConnection conn = DB.Connection();
+        conn.Open();
 
-     var cmd = conn.CreateCommand() as MySqlCommand;
-     cmd.CommandText = @"INSERT INTO exercises (exercise_name)
-                     VALUES (@exerciseName);";
+        var cmd = conn.CreateCommand() as MySqlCommand;
+        cmd.CommandText = @"INSERT INTO exercises (exercise_name)
+                           VALUES (@exerciseName);";
 
              cmd.Parameters.Add(new MySqlParameter("@exerciseName", this._exerciseName));
 

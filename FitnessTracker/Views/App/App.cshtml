@@ -6,8 +6,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 @{
-  Layout="_Layout";
+
+Layout = "_Layout";
+
 }
+
+@using FitnessTracker.Models;
+
+
 
 	<div class="body-back">
 		<div class="masthead pdng-stn1">
@@ -20,8 +26,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</form>
 					</div>
 					<div class="profile-menu text-center">
+
 						<img src="~/images/user.png">
-						<h3>Model.@GetName()</h3>
+							<h3>@Model._firstName</h3>
 						<h4>Performance Records</h4>
 						<div class="pro-menu">
 							<p>Strength</p>
@@ -133,7 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<img class="img-circle border-effect" src="~/images/user.png">
 						</div>
 						<div class="col-md-6 details-right">
-							<h3>@Model.GetName()</h3>
+							<h3>@Model._firstName  @Model._lastName</h3>
 							<h4>Daily Statistics</h4>
 							<div class="progress">
 								<div class="progress-bar" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%;">
@@ -287,7 +294,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</div>
 								<div class="goal-info">
 									<h4>Current Weight</h4>
-									<p>@Model.GetWeight()</p>
+
+									<p>@Model._registerWeight</p>
+
 								</div>
 								<div class="clearfix"></div>
 							</div>
