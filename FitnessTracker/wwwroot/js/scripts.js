@@ -1,9 +1,18 @@
-$(document).ready(function () {
-  console.log("Mark, where did you get this template? Hit me up at amkhokar@gmail.com");
-  $('.menu-link').bigSlide();
-  $('#horizontalTab').easyResponsiveTabs({
-   type: 'default', //Types: default, vertical, accordion
-   width: 'auto', //auto or any width like 600px
-   fit: true // 100% fit in a container
- });
+
+$(document).ready(function() {
+$('.menu-link').bigSlide();
+function() {
+    "use strict";
+
+    // custom scrollbar
+
+    $(".html").niceScroll({styler:"fb",cursorcolor:"#b377d9", cursorwidth: '4', cursorborderradius: '10px', background: '#FFFFFF', spacebarenabled:false, cursorborder: '0',  zindex: '1000'});
+
+    $(".scrollbar1").niceScroll({styler:"fb",cursorcolor:"#FF9554", cursorwidth: '4', cursorborderradius: '0',autohidemode: 'false', background: '#FFFFFF', spacebarenabled:false, cursorborder: '0'});
+
+    $(".scrollbar1").getNiceScroll();
+    if ($('body').hasClass('scrollbar1-collapsed')) {
+        $(".scrollbar1").getNiceScroll().hide();
+    }
 });
+})(jQuery);
