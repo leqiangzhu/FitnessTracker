@@ -87,7 +87,10 @@ namespace FitnessTracker.Models
                    double personHeigt = rdr.GetDouble(7);
                     double personWeight = rdr.GetDouble(8);
 
-               PersonInfo newPersonInfo = new PersonInfo(personFirstName, personSecondName);
+
+
+               PersonInfo newPersonInfo = new PersonInfo(personFirstName, personSecondName,personPhone,
+              personEmail,personHeigt ,personWeight,personBirthday,personGender);
                allPersonInfos.Add(newPersonInfo);
            }
            conn.Close();
@@ -136,9 +139,9 @@ namespace FitnessTracker.Models
           MySqlConnection conn = DB.Connection();
           conn.Open();
           var cmd = conn.CreateCommand() as MySqlCommand;
-          cmd.CommandText = @"SELECT * FROM persons WHERE person_id = @stylistId;";
+          cmd.CommandText = @"SELECT * FROM persons WHERE person_id = @personId;";
 
-          cmd.Parameters.Add(new MySqlParameter("@stylistId", id));
+          cmd.Parameters.Add(new MySqlParameter("@personId", id));
 
           var rdr = cmd.ExecuteReader() as MySqlDataReader;
 
@@ -150,7 +153,7 @@ namespace FitnessTracker.Models
                   string personEmail = "";
                    DateTime personBirthday = new DateTime(1000,11,11);
                    double personHeigt = 0;
-                    double personWeight = 0;
+                    double personWeight =0;
 
               while (rdr.Read())
           {
@@ -164,7 +167,11 @@ namespace FitnessTracker.Models
                   personHeigt = rdr.GetDouble(7);
                    personWeight = rdr.GetDouble(8);
           }
-           PersonInfo foundPersonInfo = new PersonInfo(personFirstName,personSecondName);
+        
+
+               PersonInfo foundPersonInfo = new PersonInfo(personFirstName, personSecondName,personPhone,
+              personEmail,personHeigt ,personWeight,personBirthday,personGender);
+
 
           conn.Close();
           if (conn != null)
