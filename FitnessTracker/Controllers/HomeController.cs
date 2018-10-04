@@ -8,10 +8,12 @@ namespace FitnessTracker.Controllers
     {
       [HttpGet("/")]
 
-        public ActionResult bongo()
+        public ActionResult Index()
 
         {
-            return View();
+             List<PersonInfo> allPersonInfos = PersonInfo.GetAllInfo();
+       PersonInfo newperson= PersonInfo.Find(1);
+            return View(newperson);
         }
     }
 }

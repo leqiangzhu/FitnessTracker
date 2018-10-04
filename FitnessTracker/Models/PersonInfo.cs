@@ -197,32 +197,35 @@ namespace FitnessTracker.Models
 
     //  public   double bmi;
 
-      public  void  CalculatorBMI(double Weight,double Height){
-              bmi=Weight/Height*Height*703;
-
-            if(bmi<15){
-              Console.Write("Very severely underweight	");
-            }else if(bmi>15 && bmi<=16){
-                Console.Write("Severely underweight	");
-            }else if (bmi>16 && bmi<=18.5) {
-                Console.Write("Underweight");
-            }else if (bmi>18.5 && bmi<=25) {
-              Console.Write("Normal (healthy weight)");
-            }else if (bmi>25 && bmi<=30) {
-              Console.Write("Overweight");
-            }else if (bmi>30 && bmi<=35) {
-              Console.Write("Obese Class I (Moderately obese)");
-            }else if (bmi>35 && bmi<=40) {
-              Console.Write("Obese Class II (Severely obese)");
-            }else if (bmi>40 && bmi<=45) {
-              Console.Write("Obese Class III (Very severely obese)");
-            }else if (bmi>45 && bmi<=50) {
-              Console.Write("Obese Class IV (Morbidly Obese)");
-            }else if (bmi>50 && bmi<=60) {
-              Console.Write("Obese Class V (Super Obese)");
-            }else if (bmi>60) {
-              Console.Write("Obese Class VI (Hyper Obese)");
-            }
+      public  double CalculatorBMI()
+      {
+       return    Math.Round(_registerWeight/(_personHeight/100*_personHeight/100),2);
+           
+             
+            // if(bmi<15){
+            //   Console.Write("Very severely underweight	");
+            // }else if(bmi>15 && bmi<=16){
+            //     Console.Write("Severely underweight	");
+            // }else if (bmi>16 && bmi<=18.5) {
+            //     Console.Write("Underweight");
+            // }else if (bmi>18.5 && bmi<=25) {
+            //   Console.Write("Normal (healthy weight)");
+            // }else if (bmi>25 && bmi<=30) {
+            //   Console.Write("Overweight");
+            // }else if (bmi>30 && bmi<=35) {
+            //   Console.Write("Obese Class I (Moderately obese)");
+            // }else if (bmi>35 && bmi<=40) {
+            //   Console.Write("Obese Class II (Severely obese)");
+            // }else if (bmi>40 && bmi<=45) {
+            //   Console.Write("Obese Class III (Very severely obese)");
+            // }else if (bmi>45 && bmi<=50) {
+            //   Console.Write("Obese Class IV (Morbidly Obese)");
+            // }else if (bmi>50 && bmi<=60) {
+            //   Console.Write("Obese Class V (Super Obese)");
+            // }else if (bmi>60) {
+            //   Console.Write("Obese Class VI (Hyper Obese)");
+            // }
+            
       }
 
 
