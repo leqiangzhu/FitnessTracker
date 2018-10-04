@@ -15,7 +15,6 @@ var userList = [];
 
 const commands = {
 
-
 } 
 con.connect(function (err) {
     if (err) throw err;
