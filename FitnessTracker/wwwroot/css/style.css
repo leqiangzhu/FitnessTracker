@@ -398,8 +398,8 @@ h5.pro-link {
 }
 
 /*  bg pic */
-.details-grid {
-    background: url(../images/.jpg) no-repeat 0px 0px;
+.bg-image{
+    background: url(../images/bg.jpg) no-repeat;
     background-size: cover;
 	-webkit-background-size: cover;
 	 -moz-background-size: cover;
