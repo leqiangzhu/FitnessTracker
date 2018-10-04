@@ -35,5 +35,13 @@ namespace FitnessTracker.Controllers
           newPersonInfo.Save();
           return RedirectToAction("Index");
         }
+
+        [HttpPost("/infos/{id}")]
+        public ActionResult AddExerciseToUser()
+        {
+          
+        }
+
+        [HttpGet("/infos/{id}/")]
     }
 }

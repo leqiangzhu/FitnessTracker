@@ -1,7 +1,13 @@
 @{
     Layout = "_Layout";
 }
-<div class="container">
+<h1 class="header-w3ls">
+  Set Your Account
+</h1>
+<!--  -->
+<div class="copy">
+  <p>&copy;2018 {Bongolia Team} All Rights Reserved | Thanks To <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
+</div>
 <script>
 window.demoDescription = "Create a subdivided grid colored with HSL color space. The pointer position updates the hue.";
 
@@ -44,7 +50,7 @@ Pts.quickStart( "#pt", "#fe3" );
     let color = (p) => {
       let p1 = p.$divide(space.size);
       let p2 = space.pointer.$divide(space.size);
-      let c = cu.$multiply( Pt.make( 4, 1 ).to( p2.x, p2.y/2 + p1.x/2, p1.y ) );
+      let c = cu.$multiply( Pt.make( 4, 1 ).to( p2.x, p2.y/3 + p1.x/3, p1.y ) );
       return Color.HSLtoRGB( c ).toString("rgb");
     }
     
@@ -56,8 +62,38 @@ Pts.quickStart( "#pt", "#fe3" );
   //// ----
   
   
-  space.bindMouse().bindTouch().play();
+  space.bindMouse().play();
   
 })();
 </script>
+<div class="form-container" style="display:inline-block">
+<form action="/" method="post">
+    <label for="new-firstname">First Name:</label><br>
+    <input id="new-firstname" name="new-firstname">
+    
+    <label for="new-lastname">Last Name:</label><br>
+    <input id="new-lastname" name="new-lastname" type="text">
+
+    <label for="new-phone-number">Phone Number:</label><br>
+    <input id="new-phone-number" name="new-phone-number" type="text">
+
+    <label for="new-email">Email:</label><br>
+    <input id="new-email" name="new-email" type="text">
+
+    <label for="new-height">Height:</label><br>
+    <input id="new-height" name="new-height" type="text">
+
+    <label for="new-weight">Weight:</label><br>
+    <input id="new-weight" name="new-weight" type="text">
+
+    <label for="new-birthday">Birthday:</label><br>
+    <input id="new-birthday" name="new-birthday" type="date">
+
+    <label for="new-gender">Gender:</label><br>
+    <select>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+</form>
 </div>

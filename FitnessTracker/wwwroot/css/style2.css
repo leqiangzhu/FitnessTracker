@@ -28,8 +28,8 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
 }
 .frame-border{
-    width: 350px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     outline: none;
     border-top: 20px solid #ececec;
     border-bottom: 20px solid #ececec;
@@ -1696,5 +1696,12 @@ input[type="file"] {
 	}
 	.menu-notify1, .menu-notify2 ,.menu-notify{
     padding: 15px 0;
+	}
+
 }
-}
+	canvas {
+		width: 100%;
+		height: 100%;
+	}
+	label, input, select, option{
+	}
