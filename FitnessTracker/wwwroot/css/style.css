@@ -1696,4 +1696,13 @@ input[type="file"] {
 	.menu-notify1, .menu-notify2 ,.menu-notify{
     padding: 15px 0;
 }
+
 }
+<<<<<<< HEAD
+=======
+    canvas {
+        height: 100%;
+        width: 100%;
+    }
+/*--//responsive--*/
+>>>>>>> master
