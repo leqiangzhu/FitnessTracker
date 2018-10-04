@@ -11,7 +11,7 @@ namespace FitnessTracker.Controllers
         public ActionResult bongo()
 
         {
-            return View("bongo");
+            return View();
         }
     }
 }
