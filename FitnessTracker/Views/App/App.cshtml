@@ -4,7 +4,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<body>
+
+@{
+  Layout="_Layout";
+}
+
 	<div class="body-back">
 		<div class="masthead pdng-stn1">
 			<div id="menu" class="panel" role="navigation">
@@ -16,7 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</form>
 					</div>
 					<div class="profile-menu text-center">
-						<img src="images/user.png">
+						<img src="~/images/user.png">
 						<h3>Model.@GetName()</h3>
 						<h4>Performance Records</h4>
 						<div class="pro-menu">
@@ -126,7 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="bg image"><div>
 					<div class="details-shade">
 						<div class="col-md-6 details-left">
-							<img class="img-circle border-effect" src="images/user.png">
+							<img class="img-circle border-effect" src="~/images/user.png">
 						</div>
 						<div class="col-md-6 details-right">
 							<h3>@Model.GetName()</h3>
@@ -150,20 +154,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="follow">
 						<div class="col-sm-4 follow-left text-center">
 							<h3>Foot Steps</h3>
-							<img id="steps" src="images/runner.png">
+							<img id="steps" src="~/images/runner.png">
 							<p>19,950</p>
 						</div>
 						<!--  -->
 						<div class="col-sm-4 follow-left text-center">
 							<h3>Distance Traveled</h3>
 							<p>1,005 miles</p>
-							<img src="images/map.png">
+							<img src="~/images/map.png">
 						</div>
 						<!--  -->
 						<div class="col-sm-4 follow-left text-center">
 							<h3>BMI</h3>
 							<p>10.1%</p>
-							<img src="images/weight-lifting.png">
+							<img src="~/images/weight-lifting.png">
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -190,7 +194,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-							<img src="images/workout.png">
+							<img src="~/images/workout.png">
 							</div>
 						</div>
 						<div class="goal-info">
@@ -207,7 +211,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-							<img src="images/workout.png"><
+							<img src="~/images/workout.png"><
 							</div>
 						</div>
 						<div class="goal-info">
@@ -225,7 +229,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-						<img src="images/exercise.png">
+						<img src="~/images/exercise.png">
 						</div>
 					</div>
 						<div class="goal-info">
@@ -243,7 +247,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-sm-6 goal-left">
 						<div class="goal-img">
 							<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-							<img src="images/met.png">
+							<img src="~/images/met.png">
 							</div>
 						</div>
 							<div class="goal-info">
@@ -278,7 +282,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="col-sm-6 goal-left">
 								<div class="goal-img">
 									<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<img src="images/lessweight.png">
+									<img src="~/images/lessweight.png">
 									</div>
 								</div>
 								<div class="goal-info">
@@ -290,7 +294,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="col-sm-6 goal-left">
 								<div class="goal-img">
 									<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<img src="images/scale.png">
+									<img src="~/images/scale.png">
 									</div>
 								</div>
 								<div class="goal-info">
@@ -314,7 +318,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h1>Guidelines and Features </h1>
 						<div class="col-md-6 program-left quality">
 							<figure>
-								<img class="img-responsive" src="images/p2.jpg">
+								<img class="img-responsive" src="~/images/p2.jpg">
 								<figcaption>
 									<div class="fig-bor">
 										<h3>Be a better lifter!</h3>
@@ -381,7 +385,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<!--  -->
 								<div class="col-md-6 program-left quality">
 									<figure>
-										<img src="images/p1.jpg" class="img-responsive" />
+										<img src="~/images/p1.jpg" class="img-responsive" />
 										<figcaption>
 											<div class="fig-bor">
 												<h3>Be Part of our Group!</h3>
@@ -452,3 +456,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 					</div>
+					
